@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background: hwb(182 0% 21% / 0.466);
+  padding: 2rem;
+}

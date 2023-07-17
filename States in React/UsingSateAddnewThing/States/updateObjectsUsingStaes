@@ -1,0 +1,36 @@
+import React, { useState } from "react";
+
+export default function App() {
+  const [user, setUser] = useState({
+    name: "John Doe",
+    address: {
+      street: "123 Main St",
+      city: "New York",
+      state: "NY",
+      postalCode: "12345"
+    }
+  });
+
+  const updateAddress = () => {
+    setUser(prevUser => ({
+      ...prevUser,
+      address: {
+        ...prevUser.address,
+        city: "San Francisco",
+        state: "CA"
+      }
+    }));
+  };
+
+  return (
+    <div>
+      <h1>User Info</h1>
+      <p>Name: {user.name}</p>
+      <p>Street: {user.address.street}</p>
+      <p>City: {user.address.city}</p>
+      <p>State: {user.address.state}</p>
+      <p>Postal Code: {user.address.postalCode}</p>
+      <button onClick={updateAddress}>Update Address</button>
+    </div>
+  );
+}

@@ -1,0 +1,1 @@
+That’s right! Lifting up state means moving state up from a child to the parent component - meaning that a previously stateless parent component becomes a stateful component, and a previously stateful child component becomes a stateless component.
